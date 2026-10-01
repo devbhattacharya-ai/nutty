@@ -43,7 +43,7 @@ export default function JarVisual({ className = "" }: { className?: string }) {
         >
           NUTTY
         </text>
-        <rect x="108" y="178" width="64" height="22" rx="3" fill="#ff6a00" />
+        <rect x="108" y="178" width="64" height="22" rx="3" fill="#c75300" />
         <text
           x="140"
           y="194"
