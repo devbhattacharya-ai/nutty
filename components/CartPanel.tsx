@@ -64,7 +64,7 @@ export default function CartPanel() {
 
   return (
     <>
-      <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+      <div className="sr-only cart-success-pulse" role="status" aria-live="polite" aria-atomic="true">
         {liveMessage}
       </div>
 
@@ -180,7 +180,7 @@ export default function CartPanel() {
                 </p>
               ) : null}
               {checkoutMsg ? (
-                <p className="cart-blocked" role="status" aria-live="polite">
+                <p className="cart-blocked cart-success-pulse" role="status" aria-live="polite">
                   Concept demo — no payment collected.
                 </p>
               ) : null}

@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Products from "@/components/Products";
 import FAQ from "@/components/FAQ";
 import CartPanel from "@/components/CartPanel";
+import Reveal from "@/components/Reveal";
 
 const WHY = [
   {
@@ -32,10 +33,11 @@ export default function HomePage() {
 
         <main id="main" tabIndex={-1}>
           <Hero />
+          <Reveal />
 
           <section
             id="story"
-            className="section section-story"
+            className="section section-story nutty-reveal"
             aria-labelledby="story-title"
           >
             <div className="section-inner story-grid">
@@ -83,7 +85,7 @@ export default function HomePage() {
               </p>
               <ul className="why-grid">
                 {WHY.map((item) => (
-                  <li key={item.title} className="why-card">
+                  <li key={item.title} className="why-card nutty-reveal">
                     <h3>{item.title}</h3>
                     <p>{item.line}</p>
                   </li>

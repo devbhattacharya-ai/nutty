@@ -1009,3 +1009,71 @@ select {
   font-size: 0.8rem;
   color: var(--muted);
 }
+
+/* === Best-effort jar storytelling motion (ChatGPT HTML blocked) === */
+.jar-visual {
+  transform-style: preserve-3d;
+  transition: transform 180ms ease-out;
+}
+.jar-float {
+  animation: jar-bob 4.5s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes jar-bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+.jar-callout {
+  animation: callout-fade 5s ease-in-out infinite;
+}
+@keyframes callout-fade {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.nutty-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.nutty-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.cart-success-pulse {
+  animation: success-pop 520ms cubic-bezier(0.2, 0, 0, 1);
+}
+@keyframes success-pop {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.4;
+  }
+  60% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jar-float,
+  .jar-callout,
+  .cart-success-pulse {
+    animation: none !important;
+  }
+  .nutty-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
